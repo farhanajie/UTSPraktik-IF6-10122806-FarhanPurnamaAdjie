@@ -376,7 +376,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/x2"
                     android:background="@drawable/gray_line"
-                    app:layout_constraintTop_toBottomOf="@id/layanan1"
+                    app:layout_constraintTop_toBottomOf="@id/layanan2"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -468,7 +468,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/x2"
                     android:background="@drawable/gray_line"
-                    app:layout_constraintTop_toBottomOf="@id/layanan3"
+                    app:layout_constraintTop_toBottomOf="@id/layanan4"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
