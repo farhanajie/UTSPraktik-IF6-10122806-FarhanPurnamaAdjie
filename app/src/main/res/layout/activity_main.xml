@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x4"
+        android:contentDescription="@string/app_name">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/x2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/x2"
+            android:layout_marginTop="@dimen/x2"
+            app:contentPadding="@dimen/x2"
+            app:contentPaddingBottom="@dimen/x4"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView_PelaksanaanPPDB"
+                    style="@style/CardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    android:text="@string/pelaksanaan_ppdb"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_Detail"
+                    style="@style/SmallButton"
+                    android:backgroundTint="@color/light_green"
+                    android:drawableLeft="@drawable/detail"
+                    android:text="@string/detail"
+                    android:textColor="@color/dark_green"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView_PelaksanaanPPDB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView_Check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="@dimen/x2"
+                    android:src="@drawable/check"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_Detail" />
+
+                <View
+                    android:id="@+id/view_GreenLine"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x3"
+                    android:background="@drawable/green_line"
+                    app:layout_constraintStart_toEndOf="@id/imageView_Check"
+                    app:layout_constraintTop_toBottomOf="@id/button_Detail" />
+
+                <ImageView
+                    android:id="@+id/imageView_Uncheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    android:src="@drawable/uncheck"
+                    app:layout_constraintStart_toEndOf="@id/view_GreenLine"
+                    app:layout_constraintTop_toBottomOf="@id/button_Detail" />
+
+                <View
+                    android:id="@+id/view_GrayLine"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x3"
+                    android:background="@drawable/gray_line"
+                    app:layout_constraintStart_toEndOf="@id/imageView_Uncheck"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_Detail" />
+
+                <ImageView
+                    android:id="@+id/imageView_IconPersiapan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    android:src="@drawable/persiapan"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageView_Check" />
+
+                <TextView
+                    android:id="@+id/textView_Persiapan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    android:layout_marginStart="@dimen/x3"
+                    android:text="@string/persiapan"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/imageView_IconPersiapan"
+                    app:layout_constraintTop_toBottomOf="@id/imageView_Check" />
+
+                <TextView
+                    android:id="@+id/textView_Tanggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x3"
+                    android:text="@string/tanggal"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_gray"
+                    app:layout_constraintStart_toEndOf="@id/imageView_IconPersiapan"
+                    app:layout_constraintTop_toBottomOf="@id/textView_Persiapan" />
+
+                <ImageView
+                    android:id="@+id/imageView_IconVerifBerkas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="115dp"
+                    android:layout_marginTop="@dimen/x2"
+                    android:src="@drawable/verifberkas"
+                    app:layout_constraintStart_toEndOf="@id/textView_Tanggal"
+                    app:layout_constraintTop_toBottomOf="@id/imageView_Check" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/x2"
+            android:layout_marginTop="@dimen/x2"
+            app:contentPadding="@dimen/x2"
+            app:layout_constraintTop_toBottomOf="@id/cardView2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView_Toa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toa"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView_PengumumanHasil"
+                    style="@style/CardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x"
+                    android:text="@string/pengumuman_hasil"
+                    app:layout_constraintTop_toBottomOf="@id/imageView_Toa"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/x2"
+                    android:padding="@dimen/x2"
+                    android:background="@drawable/light_green_rounded"
+                    app:layout_constraintTop_toBottomOf="@id/textView_PengumumanHasil"
+                    app:layout_constraintStart_toStartOf="parent">
+                    
+                    <TextView
+                        android:id="@+id/textView_AndaDiterima"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/anda_diterima"
+                        android:textSize="12sp"
+                        android:textColor="@color/dark_green"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_SMAN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x0.5"
+                        android:text="@string/sman"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/textView_AndaDiterima"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_Jalur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x0.5"
+                        android:text="@string/jalur"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/textView_SMAN"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/button_DetailWhite"
+                        style="@style/SmallButton"
+                        android:backgroundTint="@color/dark_green"
+                        android:drawableLeft="@drawable/detail_white"
+                        android:text="@string/detail"
+                        android:textColor="@color/white"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/textView_AndaDiterima"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/x2"
+            android:layout_marginTop="@dimen/x2"
+            app:contentPadding="@dimen/x2"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView_Layanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/layanan"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView_LayananPPDB"
+                    style="@style/CardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x"
+                    android:text="@string/layanan_ppdb"
+                    app:layout_constraintTop_toBottomOf="@id/imageView_Layanan"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/imageView_Pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    android:src="@drawable/pin"
+                    app:layout_constraintTop_toBottomOf="@id/textView_LayananPPDB"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/kota"
+                    android:textColor="@color/dark_green"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/imageView_Pin"
+                    app:layout_constraintTop_toBottomOf="@id/textView_LayananPPDB" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layanan1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    app:layout_constraintTop_toBottomOf="@id/imageView_Pin"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_Layanan1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/layanan1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_Layanan1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x3"
+                        android:text="@string/info_sekolah"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imageView_Layanan1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textView_Layanan1"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    android:background="@drawable/gray_line"
+                    app:layout_constraintTop_toBottomOf="@id/layanan1"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layanan2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    app:layout_constraintTop_toBottomOf="@id/layanan1"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_Layanan2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/layanan2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_Layanan2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x3"
+                        android:text="@string/sosialisasi"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imageView_Layanan2" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textView_Layanan2"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    android:background="@drawable/gray_line"
+                    app:layout_constraintTop_toBottomOf="@id/layanan1"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layanan3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    app:layout_constraintTop_toBottomOf="@id/layanan2"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_Layanan3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/layanan3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_Layanan3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x3"
+                        android:text="@string/pendaftaran_ppdb"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imageView_Layanan3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textView_Layanan3"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    android:background="@drawable/gray_line"
+                    app:layout_constraintTop_toBottomOf="@id/layanan3"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layanan4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    app:layout_constraintTop_toBottomOf="@id/layanan3"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_Layanan4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/layanan4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_Layanan4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x3"
+                        android:text="@string/pengumuman_ppdb"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imageView_Layanan4" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textView_Layanan4"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    android:background="@drawable/gray_line"
+                    app:layout_constraintTop_toBottomOf="@id/layanan3"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layanan5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x2"
+                    app:layout_constraintTop_toBottomOf="@id/layanan4"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_Layanan5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/layanan5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView_Layanan5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x3"
+                        android:text="@string/hotline"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imageView_Layanan5" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textView_Layanan5"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

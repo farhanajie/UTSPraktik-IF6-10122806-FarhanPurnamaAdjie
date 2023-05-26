@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">UTSPraktik–IF6–10122806-FarhanPurnamaAdjie</string>
+    
+    <string name="pelaksanaan_ppdb">Pelaksanaan PPDB Tahap 1 – 2023</string>
+    <string name="detail">Detail</string>
+    <string name="persiapan">Persiapan</string>
+    <string name="tanggal">17 Mei - 05 Juni 2023</string>
+
+    <string name="pengumuman_hasil">Pengumuman Hasil Seleksi</string>
+    <string name="anda_diterima">Anda dinyatakan diterima di</string>
+    <string name="sman">SMA Negeri 1 Bojonggede</string>
+    <string name="jalur">Jalur Prestasi Kejuaraan</string>
+
+    <string name="layanan_ppdb">Layanan PPDB</string>
+    <string name="kota">Kota Bandung</string>
+    <string name="info_sekolah">Info Sekolah PPDB</string>
+    <string name="sosialisasi">Sosialisasi PPDB</string>
+    <string name="pendaftaran_ppdb">Pendaftaran PPDB Tahap 1</string>
+    <string name="pengumuman_ppdb">Pengumuman PPDB Tahap 1</string>
+    <string name="hotline">Hotline</string>
+</resources>
